@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>526</width>
-    <height>490</height>
+    <width>915</width>
+    <height>651</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,27 +23,6 @@
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
-    <item row="7" column="0">
-     <widget class="QPushButton" name="BtnSimpan">
-      <property name="text">
-       <string>SIMPAN</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QPushButton" name="BtnUbah">
-      <property name="text">
-       <string>UBAH</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0">
-     <widget class="QPushButton" name="BtnHapus">
-      <property name="text">
-       <string>HAPUS</string>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="0">
      <widget class="QLabel" name="idPesanLabel">
       <property name="text">
@@ -104,6 +83,27 @@
     <item row="5" column="1">
      <widget class="QLineEdit" name="pesanLineEdit"/>
     </item>
+    <item row="7" column="0">
+     <widget class="QPushButton" name="BtnSimpan">
+      <property name="text">
+       <string>SIMPAN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QPushButton" name="BtnUbah">
+      <property name="text">
+       <string>UBAH</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QPushButton" name="BtnHapus">
+      <property name="text">
+       <string>HAPUS</string>
+      </property>
+     </widget>
+    </item>
     <item row="6" column="0">
      <widget class="QLabel" name="statusLabel">
       <property name="text">
@@ -112,7 +112,144 @@
      </widget>
     </item>
     <item row="6" column="1">
-     <widget class="QLineEdit" name="statusLineEdit"/>
+     <widget class="QComboBox" name="statusComboBox">
+      <item>
+       <property name="text">
+        <string>Pending</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Diterima</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ditolak</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLineEdit" name="lineCari">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>100</y>
+     <width>371</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tblTawar">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>160</y>
+     <width>371</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Id Pesan</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Id Member</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Id Mobil</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Tawar</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Tanggal</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Pesan</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Status</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>430</y>
+     <width>661</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout_2">
+    <item row="0" column="0">
+     <widget class="QLabel" name="filterDataLabel">
+      <property name="text">
+       <string>Filter Data</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboFilter">
+      <item>
+       <property name="text">
+        <string>Semua</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Status</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="btnCetak">
+      <property name="text">
+       <string>Cetak</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="comboStatus">
+      <item>
+       <property name="text">
+        <string>Pending</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Diterima</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ditolak</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="statusLabel_2">
+      <property name="text">
+       <string>Status</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

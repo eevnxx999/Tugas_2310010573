@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2025 at 01:34 PM
+-- Generation Time: Jan 11, 2026 at 12:09 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -38,7 +38,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `username`, `password`) VALUES
-(1, 'admin1', 'admin1');
+(1, 'admin123', 'admin123'),
+(2, 'sari12345', 'sari12345');
 
 -- --------------------------------------------------------
 
@@ -61,7 +62,10 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`id_member`, `username`, `password`, `nama`, `alamat`, `email`, `telepon`) VALUES
-(1, 'member1', 'member1', 'sari', 'cemara', 'sari', '082112345678');
+(1, 'andi123', 'pass123', 'Andi Saputra', 'Jl. Mawar No.10', 'andi@mail.com', '08123456789'),
+(2, 'budi21', 'budi123', 'Budi Hartono', 'Jl. Melati No.5', 'budi@mail.com', '08231234567'),
+(3, 'sita90', 'sita123', 'Sita Wulandari', 'Jl. Kenanga No.3', 'sita@mail.com', '08345678901'),
+(4, 'dimas123', 'dimas123', 'Dimas Setiawan', 'Handil', 'dimas@gmail.com', '082112345678');
 
 -- --------------------------------------------------------
 
@@ -79,7 +83,11 @@ CREATE TABLE `merek` (
 --
 
 INSERT INTO `merek` (`id_merek`, `merek`) VALUES
-(1, 'toyota');
+(1, 'Toyota'),
+(2, 'Honda'),
+(3, 'Suzuki'),
+(4, 'Daihatsu'),
+(5, 'Ferrari');
 
 -- --------------------------------------------------------
 
@@ -105,7 +113,11 @@ CREATE TABLE `mobil` (
 --
 
 INSERT INTO `mobil` (`id_mobil`, `tanggal`, `id_merek`, `type`, `tahun`, `harga`, `lokasi`, `warna`, `keterangan`, `status`) VALUES
-(1, '2025-11-19', 1, 'suv', 2025, '200000.00', 'cendana', 'putih', 'disewakan', 'sewa');
+(1, '2025-01-01', 1, 'Avanza', 2021, '350000.00', 'Banjarmasin', 'Hitam', 'Mobil keluarga, irit BBM', 'Tersedia'),
+(2, '2025-01-05', 2, 'Brio', 2022, '300000.00', 'Banjarbaru', 'Putih', 'Kondisi sangat baik', 'Tersedia'),
+(3, '2025-01-10', 3, 'Ertiga', 2020, '330000.00', 'Martapura', 'Silver', 'Muatan banyak', 'Disewakan'),
+(4, '2025-01-12', 4, 'Xenia', 2021, '340000.00', 'Banjarmasin', 'Merah', 'AC dingin, nyaman', 'Tersedia'),
+(5, '2000-01-01', 5, 'F1', 2025, '2000000.00', 'Cemara', 'Merah', 'Sport Car', 'Disewakan');
 
 -- --------------------------------------------------------
 
@@ -128,7 +140,10 @@ CREATE TABLE `tawar` (
 --
 
 INSERT INTO `tawar` (`id_pesan`, `id_member`, `id_mobil`, `tawar`, `tanggal`, `pesan`, `status`) VALUES
-(1, 1, 1, '150000.00', '2025-11-07', 'sewa', 'sewa');
+(1, 1, 1, '300000.00', '2025-02-01', 'Bisa kurang?', 'Pending'),
+(2, 2, 3, '280000.00', '2025-02-02', 'Minat sewa besok', 'Diterima'),
+(3, 3, 2, '250000.00', '2025-02-03', 'Harga nego ya', 'Ditolak'),
+(4, 4, 3, '200000.00', '2000-01-01', 'Deal', 'Diterima');
 
 --
 -- Indexes for dumped tables
@@ -175,31 +190,31 @@ ALTER TABLE `tawar`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `merek`
 --
 ALTER TABLE `merek`
-  MODIFY `id_merek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_merek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `mobil`
 --
 ALTER TABLE `mobil`
-  MODIFY `id_mobil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_mobil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tawar`
 --
 ALTER TABLE `tawar`
-  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

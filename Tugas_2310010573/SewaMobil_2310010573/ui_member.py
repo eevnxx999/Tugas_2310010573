@@ -15,14 +15,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFormLayout, QLabel, QLineEdit,
-    QPushButton, QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFormLayout, QHeaderView,
+    QLabel, QLineEdit, QPushButton, QSizePolicy,
+    QTableWidget, QTableWidgetItem, QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(522, 471)
+        Form.resize(897, 658)
         self.formLayoutWidget = QWidget(Form)
         self.formLayoutWidget.setObjectName(u"formLayoutWidget")
         self.formLayoutWidget.setGeometry(QRect(140, 60, 251, 341))
@@ -114,6 +115,50 @@ class Ui_Form(object):
 
         self.formLayout.setWidget(6, QFormLayout.ItemRole.FieldRole, self.teleponLineEdit)
 
+        self.lineCari = QLineEdit(Form)
+        self.lineCari.setObjectName(u"lineCari")
+        self.lineCari.setGeometry(QRect(430, 60, 361, 28))
+        self.tblMember = QTableWidget(Form)
+        if (self.tblMember.columnCount() < 7):
+            self.tblMember.setColumnCount(7)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tblMember.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tblMember.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tblMember.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tblMember.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.tblMember.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        self.tblMember.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.tblMember.setHorizontalHeaderItem(6, __qtablewidgetitem6)
+        self.tblMember.setObjectName(u"tblMember")
+        self.tblMember.setGeometry(QRect(430, 120, 361, 281))
+        self.formLayoutWidget_2 = QWidget(Form)
+        self.formLayoutWidget_2.setObjectName(u"formLayoutWidget_2")
+        self.formLayoutWidget_2.setGeometry(QRect(140, 420, 651, 111))
+        self.formLayout_2 = QFormLayout(self.formLayoutWidget_2)
+        self.formLayout_2.setObjectName(u"formLayout_2")
+        self.formLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.filterDataLabel = QLabel(self.formLayoutWidget_2)
+        self.filterDataLabel.setObjectName(u"filterDataLabel")
+
+        self.formLayout_2.setWidget(0, QFormLayout.ItemRole.LabelRole, self.filterDataLabel)
+
+        self.comboFilter = QComboBox(self.formLayoutWidget_2)
+        self.comboFilter.addItem("")
+        self.comboFilter.setObjectName(u"comboFilter")
+
+        self.formLayout_2.setWidget(0, QFormLayout.ItemRole.FieldRole, self.comboFilter)
+
+        self.btnCetak = QPushButton(self.formLayoutWidget_2)
+        self.btnCetak.setObjectName(u"btnCetak")
+
+        self.formLayout_2.setWidget(1, QFormLayout.ItemRole.FieldRole, self.btnCetak)
+
 
         self.retranslateUi(Form)
 
@@ -132,5 +177,23 @@ class Ui_Form(object):
         self.alamatLabel.setText(QCoreApplication.translate("Form", u"Alamat", None))
         self.emailLabel.setText(QCoreApplication.translate("Form", u"Email", None))
         self.teleponLabel.setText(QCoreApplication.translate("Form", u"Telepon", None))
+        ___qtablewidgetitem = self.tblMember.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("Form", u"Id Member", None));
+        ___qtablewidgetitem1 = self.tblMember.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("Form", u"Username", None));
+        ___qtablewidgetitem2 = self.tblMember.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("Form", u"Password", None));
+        ___qtablewidgetitem3 = self.tblMember.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("Form", u"Nama", None));
+        ___qtablewidgetitem4 = self.tblMember.horizontalHeaderItem(4)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("Form", u"Alamat", None));
+        ___qtablewidgetitem5 = self.tblMember.horizontalHeaderItem(5)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("Form", u"Email", None));
+        ___qtablewidgetitem6 = self.tblMember.horizontalHeaderItem(6)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("Form", u"Telepon", None));
+        self.filterDataLabel.setText(QCoreApplication.translate("Form", u"Filter Data", None))
+        self.comboFilter.setItemText(0, QCoreApplication.translate("Form", u"Semua", None))
+
+        self.btnCetak.setText(QCoreApplication.translate("Form", u"Cetak", None))
     # retranslateUi
 

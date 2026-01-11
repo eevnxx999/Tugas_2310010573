@@ -61,6 +61,11 @@
     <string>Data Tawar</string>
    </property>
   </action>
+  <action name="actionData_Barang">
+   <property name="text">
+    <string>Data Barang</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

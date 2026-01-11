@@ -15,14 +15,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFormLayout, QLabel, QLineEdit,
-    QPushButton, QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFormLayout, QHeaderView,
+    QLabel, QLineEdit, QPushButton, QSizePolicy,
+    QTableWidget, QTableWidgetItem, QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(566, 452)
+        Form.resize(835, 561)
         self.formLayoutWidget = QWidget(Form)
         self.formLayoutWidget.setObjectName(u"formLayoutWidget")
         self.formLayoutWidget.setGeometry(QRect(150, 70, 251, 281))
@@ -64,6 +65,46 @@ class Ui_Form(object):
 
         self.formLayout.setWidget(1, QFormLayout.ItemRole.FieldRole, self.merekLineEdit)
 
+        self.lineCari = QLineEdit(Form)
+        self.lineCari.setObjectName(u"lineCari")
+        self.lineCari.setGeometry(QRect(440, 70, 261, 28))
+        self.tblMerek = QTableWidget(Form)
+        if (self.tblMerek.columnCount() < 2):
+            self.tblMerek.setColumnCount(2)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tblMerek.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tblMerek.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        self.tblMerek.setObjectName(u"tblMerek")
+        self.tblMerek.setGeometry(QRect(440, 130, 261, 221))
+        self.formLayoutWidget_2 = QWidget(Form)
+        self.formLayoutWidget_2.setObjectName(u"formLayoutWidget_2")
+        self.formLayoutWidget_2.setGeometry(QRect(150, 370, 551, 111))
+        self.formLayout_2 = QFormLayout(self.formLayoutWidget_2)
+        self.formLayout_2.setObjectName(u"formLayout_2")
+        self.formLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.filterDataLabel = QLabel(self.formLayoutWidget_2)
+        self.filterDataLabel.setObjectName(u"filterDataLabel")
+
+        self.formLayout_2.setWidget(0, QFormLayout.ItemRole.LabelRole, self.filterDataLabel)
+
+        self.comboFilter = QComboBox(self.formLayoutWidget_2)
+        self.comboFilter.addItem("")
+        self.comboFilter.addItem("")
+        self.comboFilter.setObjectName(u"comboFilter")
+
+        self.formLayout_2.setWidget(0, QFormLayout.ItemRole.FieldRole, self.comboFilter)
+
+        self.btnCetak = QPushButton(self.formLayoutWidget_2)
+        self.btnCetak.setObjectName(u"btnCetak")
+
+        self.formLayout_2.setWidget(2, QFormLayout.ItemRole.FieldRole, self.btnCetak)
+
+        self.txtMerek = QLineEdit(self.formLayoutWidget_2)
+        self.txtMerek.setObjectName(u"txtMerek")
+
+        self.formLayout_2.setWidget(1, QFormLayout.ItemRole.FieldRole, self.txtMerek)
+
 
         self.retranslateUi(Form)
 
@@ -77,5 +118,14 @@ class Ui_Form(object):
         self.BtnHapus.setText(QCoreApplication.translate("Form", u"HAPUS", None))
         self.idMerekLabel.setText(QCoreApplication.translate("Form", u"Id Merek", None))
         self.merekLabel.setText(QCoreApplication.translate("Form", u"Merek", None))
+        ___qtablewidgetitem = self.tblMerek.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("Form", u"Id Merek", None));
+        ___qtablewidgetitem1 = self.tblMerek.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("Form", u"Merek", None));
+        self.filterDataLabel.setText(QCoreApplication.translate("Form", u"Filter Data", None))
+        self.comboFilter.setItemText(0, QCoreApplication.translate("Form", u"Semua", None))
+        self.comboFilter.setItemText(1, QCoreApplication.translate("Form", u"Merek", None))
+
+        self.btnCetak.setText(QCoreApplication.translate("Form", u"Cetak", None))
     # retranslateUi
 

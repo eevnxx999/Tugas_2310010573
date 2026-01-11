@@ -34,6 +34,8 @@ class Ui_MainWindow(object):
         self.actionData_Member.setObjectName(u"actionData_Member")
         self.actionData_Tawar = QAction(MainWindow)
         self.actionData_Tawar.setObjectName(u"actionData_Tawar")
+        self.actionData_Barang = QAction(MainWindow)
+        self.actionData_Barang.setObjectName(u"actionData_Barang")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -66,6 +68,7 @@ class Ui_MainWindow(object):
         self.actionData_Mobil.setText(QCoreApplication.translate("MainWindow", u"Data Mobil", None))
         self.actionData_Member.setText(QCoreApplication.translate("MainWindow", u"Data Member", None))
         self.actionData_Tawar.setText(QCoreApplication.translate("MainWindow", u"Data Tawar", None))
+        self.actionData_Barang.setText(QCoreApplication.translate("MainWindow", u"Data Barang", None))
         self.menuMenu_Utama.setTitle(QCoreApplication.translate("MainWindow", u"Menu Utama", None))
     # retranslateUi
 
